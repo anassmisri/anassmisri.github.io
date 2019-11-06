@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao|McLaren&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <video autoplay muted loop id="myVideo">
+      <source src="img/video.mp4" type="video/mp4">
+    </video>
+    <div class="topnav">
+      <a class="active" href="index.html">Home</a>
+      <a href="nieuws.html">Nieuws</a>
+      <a href="contact.html">Contact</a>
+      <a href="over-mij.html">Over-mij</a>
+      <a href="projecten.html">Projecten</a>
+      <a href="vaardigheden.html">Vaardigheden</a>
+    </div>
+    <img style="height:200px;float:right;margin-top:100px;margin-right: 100px;" src="img/portfolio.jpg">
+    <img style="height:150px;float:left;margin-top:100px;margin-left: 100px;" src="img/portfolio2.jpg">
+    <h1>
+      <center>Welkom op mijn pagina! <br>
+        Ik ben Anass, een front-end developer in opleiding.</center>
+    </h1>
+
+    <p>Aangenaam ,
+      ik ben Anass Misri geboren op 26, augustus 2002,In Amsterdam. <br>
+      Ik ben momenteel bezig met de opleiding applicatie ontwikkelaar op het ROC Van Amsterdam,<br>
+      locatie Amstelland.
+      Wat ik wil in de ICT? is projectleider worden in de IT,<br>
+      door middel op het hbo de opleiding te kiezen It business and management.
+      Meer lezen zie Over-mij.<br>
+      <br>
+
+      Vind je het een mooie site ? <br>
+      Geef ons een like door op de link te drukken like links van dit bericht.
+    </p>
+    <a href="#" class="like-counter">Like</a><span class="click-text"><a id="clicks"></span>
+    <script>var clicks = 14;
+
+      document.getElementById("clicks").innerHTML = clicks;
+
+      $('.like-counter').click(function () {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+        $('.like-counter').addClass("liked");
+      });</script>
+
+    <footer>
+      <div id="datum"></div>
+      <script>function ShowLocalDate() {
+          var dNow = new Date();
+          var localdate = dNow.getDate() + '/' + (dNow.getMonth() + 1) + '/' +
+
+
+            dNow.getMinutes() + ' ' + dNow.getHours() + ':' + dNow.getFullYear();
+          $('#currentDate').html(localdate);
+          $('#startDt').val(localdate);
+        }
+        ShowLocalDate();
+        function test() {
+          var icurrentTime = new Date();
+          var currentTime = icurrentTime.getDate() + '/' + (icurrentTime.getMonth() + 1) + '/' + icurrentTime.getFullYear();
+
+          var end = new Date($('#endDt').val());
+
+          document.getElementById("datum").innerHTML = (currentTime);
+          //alert(end);
+
+
+        }
+        test();</script>
+        <a class="github1" href="https://github.com/anassmisri">Github</a>
+        <a class="linkedin" href="https://www.linkedin.com/in/anass-misri-b41968193/">linkedin</a>
+    </footer>
+
+
+  </header>
+</body>
+
+</html>
